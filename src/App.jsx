@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Logo from './components/Logo';
 import image from "./img/90211791.png";
@@ -13,6 +13,10 @@ const helpText = "help text"
 const App = () => {
   const [count, setCount] = useState(0)
   const [name, setName] = useState("")
+
+  useEffect(()=>{
+    document.title = `[${count}] React App`
+  })
 
   const increment = () => {
     setCount(count + 1)
