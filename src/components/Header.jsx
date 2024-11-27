@@ -1,6 +1,7 @@
-const Header = ({count}) => {
+const Header = ({count, name}) => {
+  console.log(name)
     return (
-      <header>site up {count}</header> 
+      <header>site up {count} — {name}</header> 
     )
   }
 
