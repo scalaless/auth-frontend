@@ -13,3 +13,33 @@ header {
     color: chocolate;
     padding: 20px;
 }
+
+hr.dotted {
+    border-top: 3px dotted #bbb;
+    margin: 1%;
+}
+
+.bigButton {
+    display: inline-block;
+    font-size: x-large;
+    cursor: pointer;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    margin: 1rem;
+    border-radius: 1ex;
+    box-shadow: 0 9px #999;
+  }
+  
+  .bigButton:hover {background-color: #3e8e41}
+  
+  .bigButton:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }

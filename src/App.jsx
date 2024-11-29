@@ -4,6 +4,7 @@ import Logo from './components/Logo';
 import image from "./img/90211791.png";
 import ButtonUp from './components/ButtonUp';
 import ButtonDown from './components/ButtonDown';
+import StateWork from './components/StateWork';
 
 const inputClick = () => {
   console.log("clocked")
@@ -29,6 +30,11 @@ const App = () => {
   return (
     <div>
       <Header count={count} name={name}/>
+
+      <StateWork stateTitle="pupupu"/>
+
+      <hr className="dotted"/>
+
       <Logo image={image}/>
       <br/>
       <input onChange={event=>setName(event.target.value)} placeholder={helpText} onClick={inputClick}></input>
