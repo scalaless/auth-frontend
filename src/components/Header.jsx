@@ -1,8 +1,8 @@
-const Header = ({count, name}) => {
+import React from "react";
 
-  console.log(name)
+const Header = ({count, name}) => {
     return (
-      <header>site up {count} — {name}</header> 
+      <header>Site up . {count} — {name}</header> 
     )
   }
 

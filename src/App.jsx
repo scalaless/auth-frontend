@@ -5,6 +5,7 @@ import image from "./img/90211791.png";
 import ButtonUp from './components/ButtonUp';
 import ButtonDown from './components/ButtonDown';
 import StateWork from './components/StateWork';
+import UserList from './components/UserList';
 
 const inputClick = () => {
   console.log("clocked")
@@ -16,7 +17,11 @@ const App = () => {
   const [name, setName] = useState("")
 
   useEffect(()=>{
-    document.title = `[${count}] React App`
+    document.title = `[${count}] Control Panel`
+  })
+
+  useEffect(()=>{
+    setName("a")
   })
 
   const increment = () => {
@@ -31,7 +36,10 @@ const App = () => {
     <div>
       <Header count={count} name={name}/>
 
-      <StateWork stateTitle="pupupu"/>
+      <main>
+        <UserList />
+      </main>
+      {/* <StateWork stateTitle="pupu"/>
 
       <hr className="dotted"/>
 
@@ -40,7 +48,7 @@ const App = () => {
       <input onChange={event=>setName(event.target.value)} placeholder={helpText} onClick={inputClick}></input>
       <br/>
       <ButtonUp setMessage={increment}/>
-      <ButtonDown setMessage={decrement}/>
+      <ButtonDown setMessage={decrement}/> */}
       {/* <button onClick={increment}>Добавить 1</button>
       <button onClick={decrement}>Убрать 1</button> */}
     </div>)
