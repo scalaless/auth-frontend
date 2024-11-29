@@ -52,10 +52,10 @@ header {
     margin: 0 !important;
 }
 
-aside {
+/* aside {
     width: 20%;
     float: left;
-}
+} */
 
 hr.dotted {
     border-top: 3px dotted #bbb;
@@ -86,3 +86,19 @@ hr.dotted {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
+
+  
+aside form input, 
+aside form textarea, 
+aside form button {
+    margin: 1ex;
+    justify-content: center;
+    height: 90%;
+    padding: 1%;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 300;
+    border: 5px;
+    font-size: 15px;
+    outline: auto;
+    color: black;
+}

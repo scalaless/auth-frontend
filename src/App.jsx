@@ -6,6 +6,7 @@ import ButtonUp from './components/ButtonUp';
 import ButtonDown from './components/ButtonDown';
 import StateWork from './components/StateWork';
 import UserList from './components/UserList';
+import AddUser from './components/AddUser';
 
 const inputClick = () => {
   console.log("clocked")
@@ -39,6 +40,9 @@ const App = () => {
       <main>
         <UserList />
       </main>
+      <aside>        
+        <AddUser />
+      </aside>
       {/* <StateWork stateTitle="pupu"/>
 
       <hr className="dotted"/>
