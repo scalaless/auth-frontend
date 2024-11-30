@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
-const AddUser = () => {
+const AddUser = ({onAdd}) => {
+    const [currentUser, setCurrentUser] = useState({
+        email: "",
+        age: 0,
+        address: "",
+    })
+
     return (
         <form>
-            <input placeholder="email"/>
-            <input placeholder="age"/>
-            <textarea placeholder="address"/>
+            <input onChange={(event)=> setCurrentUser(prev => ({ ...prev, email: event.target.value }))} placeholder="email"/>
+            <input onChange={(event)=> setCurrentUser(prev => ({ ...prev, age: event.target.value }))} placeholder="age"/>
+            <textarea onChange={(event)=> setCurrentUser(prev => ({...prev, address: event.target.value}))} placeholder="address"/>
 
-            <button type="button">+ Add +</button>
+            <button onClick={() => onAdd(currentUser)} className="bigButton" type="button">+ Add +</button>
         </form>
     )
 }
