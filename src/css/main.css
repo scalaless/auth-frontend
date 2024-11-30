@@ -89,9 +89,9 @@ hr.dotted {
   }
 
   
-aside form input, 
-aside form textarea, 
-aside form button {
+form input, 
+form textarea, 
+form button {
     margin: 1ex;
     width: 90%;
     padding: 1%;
