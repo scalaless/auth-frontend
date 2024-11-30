@@ -39,6 +39,10 @@ const App = () => {
     setUs((prev)=> [...prev, {id, ...u}])
   }
 
+  const removeUser = (id) => {
+    setUs((prev)=> prev.filter((x)=> x.id != id))
+  }
+
   const [us, setUs] = useState([
     {
         id: 0,
@@ -68,14 +72,14 @@ const App = () => {
         email: "coupppurtoiiuyttree@wertoiu.com",
         address: "102 Orenburg Street, Uittro, Palau, 555"
     }
-], addUser)
+], [addUser, removeUser])
 
   return (
     <div>
       <Header count={count} name={name}/>
 
       <main>
-        <UserList us={us} />
+        <UserList us={us} onRemove={removeUser}/>
       </main>
       <aside>        
         <AddUser onAdd={addUser} />

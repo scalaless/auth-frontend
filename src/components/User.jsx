@@ -3,9 +3,9 @@ import { IoMdCloseCircle,  } from "react-icons/io";
 import "../css/main.css"
 import { FaEdit } from "react-icons/fa";
 
-const User = ({ user }) => {
+const User = ({ user, onRemove }) => {
     return (<div className="user">
-        <IoMdCloseCircle className="deleteIcon"/>
+        <IoMdCloseCircle onClick={()=> onRemove(user.id)} className="deleteIcon"/>
         <FaEdit className="editIcon"/>
         <h3>{user.id}. {user.email}</h3>
         <p>{user.balance}</p>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 const AddUser = ({onAdd}) => {
     const [currentUser, setCurrentUser] = useState({
@@ -7,13 +7,18 @@ const AddUser = ({onAdd}) => {
         address: "",
     })
 
+    const myForm = useRef(null)
+
     return (
-        <form>
+        <form ref={myForm}>
             <input onChange={(event)=> setCurrentUser(prev => ({ ...prev, email: event.target.value }))} placeholder="email"/>
             <input onChange={(event)=> setCurrentUser(prev => ({ ...prev, age: event.target.value }))} placeholder="age"/>
             <textarea onChange={(event)=> setCurrentUser(prev => ({...prev, address: event.target.value}))} placeholder="address"/>
 
-            <button onClick={() => onAdd(currentUser)} className="bigButton" type="button">+ Add +</button>
+            <button onClick={() => {
+                myForm.current.reset()
+                onAdd(currentUser)
+            }} className="bigButton" type="button">+ Add +</button>
         </form>
     )
 }
